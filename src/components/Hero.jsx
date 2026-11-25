@@ -37,7 +37,7 @@ export default function Hero() {
             <div className="hero__links">
               {profile.resumeUrl && (
                 <a className="tlink" href={profile.resumeUrl} target="_blank" rel="noreferrer">
-                  Résumé (PDF)
+                  CV (PDF)
                 </a>
               )}
               {profile.links.map((l) => (

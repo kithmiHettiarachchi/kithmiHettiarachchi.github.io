@@ -69,7 +69,7 @@ export default function Header() {
             {profile.resumeUrl && (
               <li>
                 <a className="nav__cta" href={profile.resumeUrl} target="_blank" rel="noreferrer">
-                  Résumé
+                  CV
                 </a>
               </li>
             )}
@@ -108,7 +108,7 @@ export default function Header() {
           ))}
           {profile.resumeUrl && (
             <a className="tlink" href={profile.resumeUrl} target="_blank" rel="noreferrer">
-              Résumé
+              CV
             </a>
           )}
         </div>

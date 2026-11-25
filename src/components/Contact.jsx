@@ -7,7 +7,7 @@ export default function Contact() {
       : []),
     ...profile.links.map((l) => ({ ...l, external: true })),
     ...(profile.resumeUrl
-      ? [{ label: 'Résumé', handle: 'Download PDF', href: profile.resumeUrl, external: true }]
+      ? [{ label: 'CV', handle: 'Download PDF', href: profile.resumeUrl, external: true }]
       : []),
   ];
 

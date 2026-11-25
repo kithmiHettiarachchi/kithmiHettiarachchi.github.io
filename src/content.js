@@ -13,7 +13,7 @@ export const profile = {
 
   // Shown in the Contact section and header when filled in.
   email: 'kithmi0420@gmail.com',
-  resumeUrl: '', // e.g. '/Kithmi-Hettiarachchi-CV.pdf' (place the PDF in /public)
+  resumeUrl: `${import.meta.env.BASE_URL}Kithmi-Hettiarachchi-CV.pdf`, // PDF lives in /public
 
   links: [
     {
