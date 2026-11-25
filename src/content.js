@@ -254,13 +254,13 @@ export const about = {
 
 export const education = [
   {
-    programme: 'Software Engineering',
-    school: 'Informatics Institute of Technology (IIT), University of Westminster',
-    period: 'In progress',
+    programme: 'BEng (Hons) Software Engineering',
+    school: 'University of Westminster (UK), delivered by Informatics Institute of Technology (IIT), Sri Lanka',
+    period: '2023 – 2027',
   },
   {
-    programme: 'Information Systems',
+    programme: 'BSc (Hons) Information Systems',
     school: 'Sabaragamuwa University of Sri Lanka',
-    period: 'In progress',
+    period: '2024 – 2028',
   },
 ];
