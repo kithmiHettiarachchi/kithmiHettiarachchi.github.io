@@ -5,11 +5,14 @@ export const profile = {
   firstName: 'Kithmi',
   lastName: 'Hettiarachchi',
   focus: 'Software engineering · Machine learning',
-  location: 'Sri Lanka · GMT+5:30',
+  location: 'Matara, Sri Lanka · GMT+5:30',
+  availability: 'Open to internships',
+  availabilityDetail:
+    'I’m currently looking for internships in software engineering, AI and machine learning.',
   lede: 'I build full-stack software with machine learning at its core, from a retrieval-grounded legal assistant to a study of why two songs feel alike.',
 
   // Shown in the Contact section and header when filled in.
-  email: '', // e.g. 'name@example.com'
+  email: 'kithmi0420@gmail.com',
   resumeUrl: '', // e.g. '/Kithmi-Hettiarachchi-CV.pdf' (place the PDF in /public)
 
   links: [

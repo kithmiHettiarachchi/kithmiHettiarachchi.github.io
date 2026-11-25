@@ -20,6 +20,12 @@ export default function Contact() {
         <h2 className="contact__title" id="contact-title" data-reveal>
           Have a role, a project or a question? <em>Let’s talk.</em>
         </h2>
+        {profile.availabilityDetail && (
+          <p className="contact__note" data-reveal>
+            <span className="contact__status" aria-hidden="true" />
+            {profile.availabilityDetail}
+          </p>
+        )}
 
         <ul className="contact__links">
           {links.map((l) => (

@@ -340,6 +340,21 @@ main:focus {
   border-top: 1px solid var(--ink);
 }
 
+.hero__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+}
+
+.hero__status::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
 .hero__name {
   grid-column: 1 / span 8;
   grid-row: 1;
@@ -960,6 +975,25 @@ a.archive__name:hover {
 .contact__title em {
   color: var(--accent-light);
   white-space: nowrap;
+}
+
+.contact__note {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  max-width: 40ch;
+  margin-top: clamp(24px, 3vw, 36px);
+  color: var(--on-dark-mute);
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+}
+
+.contact__status {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-light);
+  transform: translateY(-2px);
 }
 
 .contact__links {

@@ -7,6 +7,7 @@ export default function Hero() {
     <section className="hero wrap" id="top" aria-label="Introduction">
       <div className="hero__meta label">
         <span>{profile.focus}</span>
+        {profile.availability && <span className="hero__status">{profile.availability}</span>}
         <span>{profile.location}</span>
       </div>
 
