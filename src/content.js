@@ -36,6 +36,8 @@ export const now = [
 ];
 
 // status: 'complete' | 'progress'
+// team / role (optional): marks a group project and describes your part in it.
+// mine (optional, on a point or flow step): highlights the parts you built yourself.
 // links (optional): [{ label: 'GitHub', href: 'https://…' }, { label: 'Live demo', href: 'https://…' }]
 export const projects = [
   {
@@ -47,22 +49,25 @@ export const projects = [
     statusLabel: 'Completed',
     summary:
       'One place to get legal guidance, find the right lawyer and draft legal documents, with retrieval-grounded AI behind each step.',
+    team: true,
+    role: 'Led the team as project manager and built the AI-powered lawyer search.',
     stack: ['Next.js', 'Express.js', 'PostgreSQL', 'Google Gemini', 'Pinecone', 'Socket.io'],
-    flowLabel: 'How the legal chatbot answers',
+    flowLabel: 'Lawyer matching, the part I built',
     flow: [
-      { step: 'Ask', detail: 'Legal question' },
-      { step: 'Embed', detail: 'Gemini embeddings' },
-      { step: 'Retrieve', detail: 'Pinecone vector search' },
-      { step: 'Answer', detail: 'Gemini + retrieved context' },
+      { step: 'Describe', detail: 'Client’s case in plain language' },
+      { step: 'Embed', detail: 'Semantic vector' },
+      { step: 'Search', detail: 'Pinecone similarity' },
+      { step: 'Match', detail: 'Best-fit lawyers' },
     ],
     points: [
       {
-        lead: 'RAG legal chatbot',
-        text: 'Semantic embeddings from Google Gemini query a Pinecone vector database, so answers are grounded in relevant legal context.',
-      },
-      {
         lead: 'Lawyer recommendations',
         text: 'Vector search matches a client’s case description to the best-suited legal professionals using natural-language similarity scoring.',
+        mine: true,
+      },
+      {
+        lead: 'RAG legal chatbot',
+        text: 'Semantic embeddings from Google Gemini query a Pinecone vector database, so answers are grounded in relevant legal context.',
       },
       {
         lead: 'Document drafting',

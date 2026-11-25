@@ -15,16 +15,18 @@ function Flow({ index, label, steps }) {
     <figure className="flow" data-reveal>
       <ol className="flow__steps">
         {steps.map((s, i) => (
-          <li className="flow__step" key={s.step}>
+          <li className={`flow__step${s.mine ? ' flow__step--mine' : ''}`} key={s.step}>
             <span className="flow__step-name">
               <span aria-hidden="true">{String(i + 1).padStart(2, '0')}</span> {s.step}
             </span>
             <span className="flow__detail">{s.detail}</span>
+            {s.mine && <span className="visually-hidden">(my part)</span>}
           </li>
         ))}
       </ol>
       <figcaption className="flow__caption">
         Fig. {index} / {label}
+        {steps.some((s) => s.mine) && <span className="flow__key"> / Outlined: my part</span>}
       </figcaption>
     </figure>
   );
@@ -46,6 +48,12 @@ function Project({ project: p, index }) {
           {p.title}
         </h3>
         <p className="project__subtitle">{p.subtitle}</p>
+        {p.role && (
+          <div className="project__role">
+            <p className="label">{p.team ? 'Team project · My role' : 'My role'}</p>
+            <p className="project__role-text">{p.role}</p>
+          </div>
+        )}
         <ul className="stack" aria-label="Built with">
           {p.stack.map((tech) => (
             <li key={tech}>{tech}</li>
@@ -72,7 +80,10 @@ function Project({ project: p, index }) {
         <ul className="points">
           {p.points.map((pt) => (
             <li key={pt.lead} data-reveal>
-              <h4 className="points__lead">{pt.lead}</h4>
+              <div>
+                <h4 className="points__lead">{pt.lead}</h4>
+                {pt.mine && <span className="points__mine">My part</span>}
+              </div>
               <p className="points__text">{pt.text}</p>
             </li>
           ))}
