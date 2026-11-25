@@ -294,3 +294,23 @@ export const education = [
     period: '2024 – 2028',
   },
 ];
+
+export const leadership = [
+  {
+    role: 'Event Chairperson & Volunteer',
+    organisation: 'Rotaract Club of Sabaragamuwa University of Sri Lanka',
+  },
+  {
+    role: 'Volunteer Designer',
+    organisation: 'IEEE Student Branch, Sabaragamuwa University of Sri Lanka',
+  },
+  {
+    role: 'Volunteer Writer',
+    organisation: 'Society of Computer Science, Sabaragamuwa University of Sri Lanka',
+  },
+];
+
+export const certifications = [
+  { name: 'Intro to Machine Learning', issuer: 'Kaggle' },
+  { name: 'Postman API Fundamentals Student Expert', issuer: 'Postman' },
+];

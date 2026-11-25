@@ -927,25 +927,28 @@ a.archive__name:hover {
   letter-spacing: -0.018em;
 }
 
-.about__side {
-  grid-column: 8 / -1;
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-}
-
 .about__body {
+  grid-column: 8 / -1;
   display: flex;
   flex-direction: column;
   gap: 1em;
   color: var(--ink-soft);
 }
 
-.edu__label {
+/* Education, leadership, certifications */
+.facts {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  column-gap: var(--col-gap);
+  row-gap: 40px;
+  margin-top: clamp(56px, 7vw, 96px);
+}
+
+.facts__label {
   margin-bottom: 10px;
 }
 
-.edu__item {
+.facts__item {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: baseline;
@@ -954,18 +957,22 @@ a.archive__name:hover {
   border-top: 1px solid var(--rule);
 }
 
-.edu__item:last-child {
+.facts__item:last-child {
   border-bottom: 1px solid var(--rule);
 }
 
-.edu__programme {
+.facts__title {
   font-family: var(--font-display);
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   line-height: 1.2;
   letter-spacing: -0.01em;
 }
 
-.edu__school {
+.facts__meta {
+  white-space: nowrap;
+}
+
+.facts__detail {
   grid-column: 1 / -1;
   color: var(--ink-soft);
   font-size: 0.95rem;
@@ -1127,6 +1134,14 @@ a.archive__name:hover {
   .toolkit {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .facts__group:first-child {
+    grid-column: 1 / -1;
+  }
 }
 
 @media (max-width: 860px) {
@@ -1212,8 +1227,12 @@ a.archive__name:hover {
   }
 
   .about__statement,
-  .about__side {
+  .about__body {
     grid-column: 1;
+  }
+
+  .facts {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
