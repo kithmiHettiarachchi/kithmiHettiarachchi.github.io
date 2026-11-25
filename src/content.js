@@ -81,6 +81,46 @@ export const projects = [
     links: [],
   },
   {
+    slug: 'sanctionguard',
+    title: 'SanctionGuard',
+    subtitle: 'Global compliance screening platform',
+    kind: 'Backend · Search & compliance',
+    status: 'complete',
+    statusLabel: 'Completed',
+    summary:
+      'An automated compliance platform that screens individuals and entities against the major global sanctions lists, with fuzzy matching built for entity resolution.',
+    team: true,
+    role: 'Built the pipeline that retrieves and ingests the sanctions lists, and contributed across the rest of the platform.',
+    stack: ['Node.js', 'Express.js', 'MongoDB Atlas', 'Elasticsearch'],
+    flowLabel: 'Screening pipeline',
+    flow: [
+      { step: 'Ingest', detail: 'OFAC, UN & EU lists', mine: true },
+      { step: 'Index', detail: 'Elasticsearch' },
+      { step: 'Match', detail: 'Phonetic + n\u2011gram' },
+      { step: 'Record', detail: 'Risk score + audit trail' },
+    ],
+    points: [
+      {
+        lead: 'Sanctions-list ingestion',
+        text: 'Scheduled pipelines that retrieve and ingest the OFAC, UN and EU sanctions lists for screening.',
+        mine: true,
+      },
+      {
+        lead: 'Matching engine',
+        text: 'A high-performance Elasticsearch engine using phonetic and n-gram algorithms for entity resolution.',
+      },
+      {
+        lead: 'Screening API',
+        text: 'An Express.js REST API supporting real-time screening and bulk batch processing.',
+      },
+      {
+        lead: 'Audit & risk',
+        text: 'A secure MongoDB Atlas data layer that keeps comprehensive audit trails and evaluates customizable risk scores.',
+      },
+    ],
+    links: [],
+  },
+  {
     slug: 'omnisync',
     title: 'OmniSync AI',
     subtitle: 'Predictive analytics dashboard',
@@ -154,12 +194,6 @@ export const projects = [
 
 // href (optional) turns the row into a link.
 export const earlierProjects = [
-  {
-    title: 'Sanction Guard',
-    description: 'AI-assisted sanction screening with role-based login and audit trails.',
-    stack: ['React', 'Node.js', 'MongoDB', 'Elasticsearch'],
-    team: true,
-  },
   {
     title: 'Pet Shop Website',
     description: 'Developed the shop feature of a pet-focused e-commerce site.',

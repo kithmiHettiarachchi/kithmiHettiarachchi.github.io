@@ -1,6 +1,20 @@
 import { earlierProjects, projects } from '../content.js';
 import SectionHead from './SectionHead.jsx';
 
+const WORDS = ['No', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
+const word = (n) => WORDS[n] ?? String(n);
+
+/** e.g. "Four recent projects. Two complete, two in development." */
+function summarize(list) {
+  const done = list.filter((p) => p.status === 'complete').length;
+  const ongoing = list.length - done;
+  const parts = [];
+  if (done) parts.push(`${word(done).toLowerCase()} complete`);
+  if (ongoing) parts.push(`${word(ongoing).toLowerCase()} in development`);
+  const detail = parts.join(', ');
+  return `${word(list.length)} recent projects. ${detail.charAt(0).toUpperCase()}${detail.slice(1)}.`;
+}
+
 function Status({ status, label }) {
   return (
     <span className={`status status--${status}`}>
@@ -132,7 +146,7 @@ export default function Work() {
         id="work-title"
         num="01"
         title="Selected work"
-        aside="Three recent projects. One complete, two in development."
+        aside={summarize(projects)}
       />
       {projects.map((p, i) => (
         <Project key={p.slug} project={p} index={i} />
