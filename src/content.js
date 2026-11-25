@@ -223,20 +223,50 @@ export const earlierProjects = [
 ];
 
 export const toolkit = [
-  { group: 'Languages', items: ['Python', 'JavaScript', 'Java', 'SQL', 'C'] },
+  { group: 'Languages', items: ['Python', 'JavaScript', 'TypeScript', 'Java', 'SQL', 'C', 'Ruby'] },
   {
     group: 'Web & APIs',
-    items: ['React', 'Next.js', 'Node.js', 'Express.js', 'FastAPI', 'Socket.io', 'Tailwind CSS', 'HTML & CSS'],
+    items: ['React', 'Next.js', 'Node.js', 'Express.js', 'FastAPI', 'Socket.io', 'REST APIs', 'Tailwind CSS', 'HTML & CSS'],
   },
   {
     group: 'Machine learning',
-    items: ['scikit-learn', 'PyTorch', 'Pandas', 'Hugging Face (CLAP, MERT)', 'Sentence-BERT', 'librosa'],
+    items: [
+      'scikit-learn',
+      'PyTorch',
+      'TensorFlow',
+      'Keras',
+      'NLTK',
+      'Hugging Face (CLAP, MERT)',
+      'Sentence-BERT',
+      'librosa',
+      'Image processing',
+      'Supervised & unsupervised learning',
+    ],
   },
   {
     group: 'Applied AI',
-    items: ['Google Gemini', 'Retrieval-augmented generation', 'Semantic embeddings', 'Prompt engineering'],
+    items: [
+      'Google Gemini API',
+      'Anthropic Claude API',
+      'LangChain',
+      'Retrieval-augmented generation',
+      'Vector search',
+      'Prompt engineering',
+      'Gradio',
+    ],
   },
-  { group: 'Data & search', items: ['PostgreSQL', 'MongoDB', 'Pinecone', 'Elasticsearch'] },
+  {
+    group: 'Data & analysis',
+    items: ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'Power BI', 'Statistics & probability', 'Linear algebra'],
+  },
+  {
+    group: 'Databases & search',
+    items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Pinecone', 'Elasticsearch', 'Netlify DB'],
+  },
+  {
+    group: 'Tools & cloud',
+    items: ['Git & GitHub', 'Docker', 'AWS (basics)', 'Vercel', 'Firebase', 'Jupyter', 'Google Colab', 'CI/CD'],
+  },
   {
     group: 'Research methods',
     items: ['Systematic literature review', 'Perceptual study design', 'Inter-rater reliability', 'Noise-ceiling evaluation'],

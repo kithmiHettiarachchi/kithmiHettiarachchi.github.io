@@ -8,7 +8,7 @@ export default function Toolkit() {
         id="toolkit-title"
         num="02"
         title="Toolkit"
-        aside="Languages, frameworks and methods I’ve used in the work above."
+        aside="Languages, frameworks, tools and methods I work with."
       />
       <div className="toolkit">
         {toolkit.map((g) => (
